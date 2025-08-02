@@ -10,7 +10,7 @@ div.addEventListner("click",function (){
 })
 
 ul.addEventListner("click",function (event){
-    event.stopPropagation(); // this stops this event bubbeling
+    event.stopPropagation(); // this stops this event bubbeling 
     console.log("ul was clicked")
 })
 
