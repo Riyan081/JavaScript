@@ -23,7 +23,7 @@ console.log(request);
 //promise chaining
 
 let requests = saveDb("yo");
-request
+requests
   .then(() => {
     console.log("promise was resolved data 1 ");
     return saveDb("helloworld");
@@ -38,7 +38,7 @@ console.log(request);
 
 
 let requests2 = saveDb("yo");
-request
+requests2
   .then((result) => {
     console.log("promise was resolved data 1 ");
     console.log("result",result); //result data was saved
@@ -54,3 +54,15 @@ request
   });
 console.log(request);
 
+
+
+//abhi main eitne sare function like hia na so pehle na dono alag alg fun ke first then call honge first fun c ka then thhen second fun ka then badme first fun ka 2nd then and second fun ka 2nd then 
+
+// All 3 promises start at the SAME TIME
+//let request = saveDb("yo");     // Promise 1 starts
+//let requests = saveDb("yo");    // Promise 2 starts  
+//let requests2 = saveDb("yo");   // Promise 3 starts
+
+// Then execution happens like this:
+// First .then() of all promises execute first (whichever resolves first)
+// Then second .then() of promises that have them
